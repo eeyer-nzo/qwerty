@@ -8,15 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isContentVisible = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            if isContentVisible {
+                VStack {
+                    Text("You look like...")
+                    Button {
+                        isContentVisible = false
+                    } label: {
+                        Text("WHO?????")
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                }
+                .padding()
+            }
+            
+            if !isContentVisible {
+                VStack {
+                    Text("yj")
+                    Button {
+                        isContentVisible = true
+                    } label: {
+                        Text("☠️ (please bring me back)")
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                }
+            }
         }
-        
-        .padding()
     }
 }
 
