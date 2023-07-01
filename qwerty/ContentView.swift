@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isContentVisible = true
+    @State private var funnyIndex = 0
+    
+    var celebrities = [Celebrity(celebrity: "John Cena", picture:Image("bingchilling")
+                                ),
+    ]
     
     var body: some View {
         ZStack {
@@ -30,9 +35,11 @@ struct ContentView: View {
             
             if !isContentVisible {
                 VStack {
-                    Text("yj")
+                    Text(celebrities[funnyIndex].celebrity)
+                    Text(celebrities[funnyIndex].picture)
                     Button {
                         isContentVisible = true
+                        funnyIndex = funnyIndex + 1
                     } label: {
                         Text("☠️ (please bring me back)")
                             .padding()
