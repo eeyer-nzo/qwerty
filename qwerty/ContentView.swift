@@ -11,8 +11,7 @@ struct ContentView: View {
     @State private var isContentVisible = true
     @State private var funnyIndex = 0
     
-    var celebrities = [Celebrity(celebrity: "John Cena", picture:Image("bingchilling")
-                                ),
+    var celebrities = [Celebrity(celebrity: "John Cena", picture:Image("bingchilling")),Celebrity(celebrity: "YOU!!!", picture: Image("Tarzan")),Celebrity(celebrity: "Rick Astley", picture: Image("GivenUp")),Celebrity(celebrity: "Kim Jong Un", picture: Image("f"))
     ]
     
     var body: some View {
