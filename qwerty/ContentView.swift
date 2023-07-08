@@ -38,7 +38,12 @@ struct ContentView: View {
                     Text(celebrities[funnyIndex].picture)
                     Button {
                         isContentVisible = true
+                       
                         funnyIndex = funnyIndex + 1
+                        if funnyIndex == 4 {
+                            funnyIndex = funnyIndex - 4
+                        }
+                        
                     } label: {
                         Text("☠️ (please bring me back)")
                             .padding()
