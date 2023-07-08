@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var celebrities = [Celebrity(celebrity: "John Cena", picture:Image("bingchilling")),Celebrity(celebrity: "YOU!!!", picture: Image("Tarzan")),Celebrity(celebrity: "Rick Astley", picture: Image("GivenUp")),Celebrity(celebrity: "Kim Jong Un", picture: Image("f"))
     ]
-    
+    //add more ppl
     var body: some View {
         ZStack {
             if isContentVisible {
